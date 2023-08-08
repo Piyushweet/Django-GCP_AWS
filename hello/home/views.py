@@ -444,8 +444,8 @@ def create_vm(request):
     return render(request, 'create_vm.html', {'amis': amis})'''
 
 def create_vm(request):
-    aws_access_key_id = 'AKIAQ6VVZA2KZYUAZ6HV'  # access key goes here
-    aws_secret_access_key = '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'
+    aws_access_key_id = 'XXXXXXXXXXXXXXXXX'  # access key goes here
+    aws_secret_access_key = 'XXXXXXXXXXXXXXXXX'
     default_region = 'ap-south-1'
 
     if request.method == 'POST':
@@ -500,9 +500,9 @@ def create_vm(request):
 def list_vms(request):
     # Create a session using your AWS credentials
     session = boto3.Session(
-        aws_access_key_id='AKIAQ6VVZA2KZYUAZ6HV',  # Replace with your AWS access key
+        aws_access_key_id='XXXXXXXXXXXXXXXXx',  # Replace with your AWS access key
         # Replace with your AWS secret key
-        aws_secret_access_key='KmwEDvQm011jdECc+7ofxAPpzz1tnE638nQfv09Y',
+        aws_secret_access_key='XXXXXXXXXXXXXXXXXXXXXXXXX',
         region_name='ap-south-1'  # Update with your desired AWS region
     )
 
@@ -544,9 +544,9 @@ def list_vms(request):
 def stop_vm(request):
     # Create a session using your AWS credentials
     session = boto3.Session(
-        aws_access_key_id='AKIAQ6VVZA2KZYUAZ6HV',  # Replace with your AWS access key
+        aws_access_key_id='XXXXXXXXXXXXXXXXXX',  # Replace with your AWS access key
         # Replace with your AWS secret key
-        aws_secret_access_key='KmwEDvQm011jdECc+7ofxAPpzz1tnE638nQfv09Y',
+        aws_secret_access_key='XXXXXXXXXXXXXXXXXXXXXXXXX',
         region_name='ap-south-1'  # Update with your desired AWS region
     )
 
@@ -581,9 +581,9 @@ def stop_vm(request):
 def delete_vm(request):
     # Create a session using your AWS credentials
     session = boto3.Session(
-        aws_access_key_id='AKIAQ6VVZA2KZYUAZ6HV',  # Replace with your AWS access key
+        aws_access_key_id='XXXXXXXXXXXXXXXXXXX',  # Replace with your AWS access key
         # Replace with your AWS secret key
-        aws_secret_access_key='KmwEDvQm011jdECc+7ofxAPpzz1tnE638nQfv09Y',
+        aws_secret_access_key='XXXXXXXXXXXXXXXXXXXXXXXXXX',
         region_name='ap-south-1'  # Update with your desired AWS region
     )
 
@@ -639,9 +639,9 @@ def create_ami(request):
                 'ec2',
                 region_name=region_name,
                 # Replace with your AWS access key ID
-                aws_access_key_id='AKIAQ6VVZA2KZYUAZ6HV',
+                aws_access_key_id='XXXXXXXXXXXXXXXXXXX',
                 # Replace with your AWS secret access key
-                aws_secret_access_key='KmwEDvQm011jdECc+7ofxAPpzz1tnE638nQfv09Y'
+                aws_secret_access_key='XXXXXXXXXXXXXXXXXXXXXXX'
             )
             response = ec2_client.create_image(
                 InstanceId=instance_id,
@@ -665,9 +665,9 @@ def create_ami(request):
         'ec2',
         region_name=region_name,
         # Replace with your AWS access key ID
-        aws_access_key_id='AKIAQ6VVZA2KZYUAZ6HV',
+        aws_access_key_id='XXXXXXXXXXXXXXXX',
         # Replace with your AWS secret access key
-        aws_secret_access_key='KmwEDvQm011jdECc+7ofxAPpzz1tnE638nQfv09Y'
+        aws_secret_access_key='XXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     )
     response = ec2_client.describe_instances(
         Filters=[
@@ -693,9 +693,9 @@ def list_amis(request):
 
     # Create a session using your AWS credentials
     session = boto3.Session(
-        aws_access_key_id='AKIAQ6VVZA2KZYUAZ6HV',  # access key goes here
+        aws_access_key_id='XXXXXXXXXXXXXXXXXXXXXXX',  # access key goes here
         # secret access key goes here
-        aws_secret_access_key='KmwEDvQm011jdECc+7ofxAPpzz1tnE638nQfv09Y',
+        aws_secret_access_key='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
         region_name='ap-south-1'  # Update with your desired AWS region
     )
 
@@ -729,9 +729,9 @@ def list_amis(request):
 def delete_ami(request):
     # Create a session using your AWS credentials
     session = boto3.Session(
-        aws_access_key_id='AKIAQ6VVZA2KZYUAZ6HV',  # Replace with your AWS access key
+        aws_access_key_id='XXXXXXXXXXXXXXXX',  # Replace with your AWS access key
         # Replace with your AWS secret key
-        aws_secret_access_key='KmwEDvQm011jdECc+7ofxAPpzz1tnE638nQfv09Y',
+        aws_secret_access_key='XXXXXXXXXXXXXXXXXXXXXX',
         region_name='ap-south-1'  # Update with your desired AWS region
     )
 
