@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #002447;
+        }
+
+        h1 {
+            color: #fbeceb;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .main-section {
+            background-color: #feb249;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 600px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-section">
+        <h1 class="text-center">Home Page</h1>
+
+        <br><br><br>
+        <div class="d-flex justify-content-center">
+            <p><a href="{% url 'create_vm' %}" class="btn btn-primary">Create VM</a></p>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <p><a href="{% url 'list_vms' %}" class="btn btn-primary">List VMs</a></p>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <p><a href="{% url 'stop_vm' %}" class="btn btn-primary">Stop vm</a></p>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <p><a href="{% url 'delete_vm' %}" class="btn btn-primary">Delete vm</a></p>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <p><a href="{% url 'create_ami' %}" class="btn btn-primary">Create AMI</a></p>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <p><a href="{% url 'list_amis' %}" class="btn btn-primary">List AMIs</a></p>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <p><a href="{% url 'delete_ami' %}" class="btn btn-primary">Delete AMI</a></p>
+        </div>
+        <br>
+    </div>
+</body>
+</html>
