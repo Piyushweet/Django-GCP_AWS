@@ -392,9 +392,9 @@ def delete_machine_image_gcp(request):
 ''''import boto3
 
 def create_vm(request):
-    aws_access_key_id='AKIAQ6VVZA2KZYUAZ6HV'  # access key goes here
+    aws_access_key_id = 'XXXXXXXXXXXXXXXXX'  # access key goes here
             # secret access key goes here
-    aws_secret_access_key='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'
+    aws_secret_access_key='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     default_region = 'ap-south-1'
 
     if request.method == 'POST':
@@ -466,7 +466,7 @@ def create_vm(request):
                 InstanceType=vm_type,
                 MinCount=1,
                 MaxCount=1,
-                KeyName='renu',  # Replace with your EC2 key pair name
+                KeyName='XXXX',  # Replace with your EC2 key pair name
                 TagSpecifications=[
                     {
                         'ResourceType': 'instance',
